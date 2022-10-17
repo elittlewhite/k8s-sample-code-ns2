@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: springio
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: mysqldb
