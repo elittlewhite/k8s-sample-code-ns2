@@ -33,6 +33,7 @@ $ kubectl apply -f springio-api/k8s-app
 ### check service,pod status  
 ```
 $ kubectl get svc,pods -n springio
+$ kubectl get svc,pods -n mysqldb
 ```
 
 ### or using kubernetes proxy
@@ -48,6 +49,7 @@ $ kubectl port-forward -n springio svc/springio-demo 8080:8080
 ```
 # 所有跟springio namespaces相關的resource一起砍掉 (像GCP把整個PROJECT砍掉)
 $ kubectl delete namespaces springio
+$ kubectl delete namespaces mysqldb
 $ kubectl delete pv mysql-pv --grace-period=0 --force
 ```
 

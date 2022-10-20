@@ -1,12 +1,12 @@
 apiVersion: apps/v1
-kind: Deployment
+kind: ReplicaSet
 metadata:
   labels:
     app: springio-demo
   name: springio-demo
   namespace: springio
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: springio-demo
